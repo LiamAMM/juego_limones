@@ -71,10 +71,24 @@ function detectarAtrapado(){
         limonX < personajeX + ANCHO_PERSONAJE
         && limonY + ALTO_LIMON > personajeY &&
         limonY < personajeY + ALTURA_PERSONAJE){
-        //alert("¡ATRAPADO!");
+        
         aparecerLimon();
-        puntaje=puntaje+1;
-        mostrarEnSpan("txtPuntaje",puntaje);
+        puntaje = puntaje + 1;
+        mostrarEnSpan("txtPuntaje", puntaje);
+        
+        if(puntaje == 3){
+            velocidadCaida = 150;
+            setInterval(bajarLimon, velocidadCaida);
+        }
+        
+        if(puntaje == 6){
+            velocidadCaida = 100;
+            setInterval(bajarLimon, velocidadCaida);
+        }
+        
+        if(puntaje == 10){
+            alert("¡YA CONSEGUISTE 10 LIMONES! AHORA A SACAR BUENA NOTA Y A CELEBRAR CON TEQUILA (BUENO, O CON UNA COCA-COLA)");
+        }
     }
 }
 
