@@ -19,8 +19,6 @@ let intervalo;
 
 function iniciar(){
     intervalo=setInterval(bajarLimon,velocidadCaida);//primerParametro: funcion, segundo parametro: tiempo en milisegundos
-    dibujarSuelo();
-    dibujarPersonaje();
     aparecerLimon();
 }
 function dibujarSuelo(){
