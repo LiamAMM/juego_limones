@@ -4,24 +4,73 @@
   <title>Caza Estrellas</title>
   <link rel="stylesheet" href="limones.css"/>
   <script src="utils.js"></script>
-
 </head>
+
 <body onload="iniciar()">
+
   <div class="contenedor">
-    <h1>Atrapar Limones</h1>
-    <p>Si del cielo te caen limones ..... </p>
-    <h2>Autor: Liam Morales</h2>
-    <canvas id="areaJuego" width="600" height="400"></canvas>
-    <div class="panel">
-      <p>Puntaje: <span id="txtPuntaje">0</span></p>
-      <p>Vidas: <span id="txtVidas">3</span></p>
-    </div>
-    <div class="botones">
-      <button onclick="moverIzquierda()">Izquierda</button>
-      <button onclick="moverDerecha()">Derecha</button>
-      <button onclick="reiniciar()">Reiniciar</button>
-    </div>
+
+    <header class="encabezado">
+      <div class="etiqueta">🍋 JUEGO ARCADE</div>
+
+      <h1>Atrapar Limones</h1>
+
+      <p>Si del cielo te caen limones... ¡atrápalos!</p>
+
+      <h2>Autor: Liam Morales</h2>
+    </header>
+
+    <main class="zona-juego">
+
+      <div class="barra-superior">
+
+        <div class="indicador">
+          <span class="icono">🏆</span>
+
+          <div>
+            <span class="etiqueta-indicador">PUNTAJE</span>
+            <strong id="txtPuntaje">0</strong>
+          </div>
+        </div>
+
+        <div class="indicador vidas">
+          <span class="icono">❤️</span>
+
+          <div>
+            <span class="etiqueta-indicador">VIDAS</span>
+            <strong id="txtVidas">3</strong>
+          </div>
+        </div>
+
+      </div>
+
+      <canvas id="areaJuego" width="600" height="400"></canvas>
+
+      <div class="panel">
+        <p>Usa los botones para mover tu personaje y atrapar los limones.</p>
+      </div>
+
+      <div class="botones">
+
+        <button class="btn-movimiento" onclick="moverIzquierda()">
+          ← Izquierda
+        </button>
+
+        <button class="btn-movimiento" onclick="moverDerecha()">
+          Derecha →
+        </button>
+
+        <button class="btn-reiniciar" onclick="reiniciar()">
+          ↻ Reiniciar
+        </button>
+
+      </div>
+
+    </main>
+
   </div>
+
   <script src="limones.js"></script>
+
 </body>
 </html>
