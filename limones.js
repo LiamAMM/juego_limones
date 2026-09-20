@@ -120,6 +120,8 @@ function reiniciar(){
     puntaje = 0;
     vidas = 3;
     velocidadCaida = 200;
+    personajeX = canvas.width/2;
+    personajeY = canvas.height-(ALTURA_SUELO+ALTURA_PERSONAJE);
     mostrarEnSpan("txtPuntaje",puntaje);
     mostrarEnSpan("txtVidas",vidas);
     iniciar();
