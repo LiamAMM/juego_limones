@@ -332,3 +332,38 @@ canvas {
   }
 
 }
+
+/* =========================
+   LOGO DEL JUEGO
+   ========================= */
+
+.logo {
+  display: block;
+  width: 230px;
+  height: 230px;
+  object-fit: contain;
+
+  margin: 0 auto 15px;
+
+  /* Hace que destaque sobre el fondo */
+  filter:
+    drop-shadow(0 8px 0 rgba(0, 0, 0, 0.35))
+    drop-shadow(0 0 12px rgba(255, 221, 40, 0.45))
+    drop-shadow(0 0 25px rgba(126, 255, 0, 0.25));
+
+  /* Transición suave */
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.logo:hover {
+  transform: translateY(-5px) scale(1.04);
+
+  filter:
+    drop-shadow(0 10px 0 rgba(0, 0, 0, 0.35))
+    drop-shadow(0 0 18px rgba(255, 221, 40, 0.75))
+    drop-shadow(0 0 35px rgba(126, 255, 0, 0.45));
+}
+
